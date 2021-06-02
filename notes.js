@@ -34,12 +34,14 @@ const newNote = {
 
 notes.push(noteAboutToday)
 
+// filtering through the "notes" array by searching the "feeling" key on the "note" object
 for (const note of notes) {
     if (note.feeling === searchTerm) {
         console.log(note)
     }
 }
 
+// Taking a new note and adding the "id" property onto each "note" object, then pushing them to the "notes" array. 
 const createNote = (noteObject) => {
     const lastIndex = notes.length - 1 
     const currentLastNote = notes[lastIndex]
